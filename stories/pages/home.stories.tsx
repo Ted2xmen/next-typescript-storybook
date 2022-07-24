@@ -1,8 +1,8 @@
-import Home from "../../pages/index";
+import Index from "../../pages/index";
 
 export default {
   title: "Pages/Home",
-  component: Home,
+  component: Index,
 };
 
-export const HomePage = () => <Home />;
+export const Home = () => <Index />;
