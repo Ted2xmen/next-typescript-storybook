@@ -4,6 +4,7 @@ import Image from "next/image";
 import styled from "styled-components";
 import Button from "../components/Button";
 import ListItem from "../components/ListItem";
+import Badges from "../components/Badges";
 
 const Wrapper = styled.div`
   color: green;
@@ -44,6 +45,10 @@ const Home: NextPage = () => {
             children="List item with an image"
           />
         </ul>
+      
+        <Badges rounded size="sm">sm badge</Badges>
+        <hr></hr>
+        <Badges rounded size="lg" variant="info">lg badge</Badges>
       </main>
     </Layout>
   );

@@ -1,18 +1,40 @@
 import Btn from "../../components/Button";
 
 export default {
-  title: "Components/Btn",
+  title: "Components/Buttons",
   component: Btn,
 };
 
 export const Primary = () => (
-  <Btn shadow size="sm" variant="primary">
-    Click click
+  <Btn variant="primary">
+    Primary
   </Btn>
 );
 
 export const Secondary = () => (
-  <Btn rounded size="lg" variant="secondary">
-    Click click 2
+  <Btn size="lg" variant="secondary">
+    Secondary 
   </Btn>
+);
+
+export const Sizes = () => (
+  <div>
+    <Btn size="lg" variant="primary">
+      Size LG
+    </Btn>
+    <Btn size="sm" variant="secondary">
+      Size SM
+    </Btn>
+  </div>
+);
+
+export const RadiusAndShadow = () => (
+  <div>
+    <Btn shadow rounded size="lg" variant="primary">
+      Size LG
+    </Btn>
+    <Btn shadow size="sm" variant="secondary">
+      Size SM
+    </Btn>
+  </div>
 );
