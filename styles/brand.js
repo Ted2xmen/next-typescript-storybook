@@ -5,3 +5,8 @@ export const badgeColors = {
   danger: "#B91C1C",
   info: "#1D4ED8",
 };
+
+
+export const brandColors = {
+  main: "#0F172A",
+};
