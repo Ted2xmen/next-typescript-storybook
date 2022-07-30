@@ -28,19 +28,26 @@ const Github = () => {
       });
   }, []);
 
+  const GridContainer = styled.div`
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+    margin-top: 20px;
+  `;
+
   return (
     <GithubContainer>
-      {!data ? (
-        data
-          ?.filter((f: any) => f.topics.includes("portfolio"))
-          .map((item: any, i: number) => {
-            return (
-              <GithubCard key={i} items={item} />
-            );
-          })
-      ) : (
-        <p> api request limit</p>
-      )}
+      <GridContainer>
+        {data ? (
+          data
+            ?.filter((f: any) => f.topics.includes("vue"))
+            .map((item: any, i: number) => {
+              return <GithubCard key={i} items={item} />;
+            })
+        ) : (
+          <p> api request limit</p>
+        )}
+      </GridContainer>
     </GithubContainer>
   );
 };
