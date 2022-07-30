@@ -1,8 +1,8 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+
 import Github from "../components/Cards/Github";
 import HeroParagraph from "../components/HeroParagraph";
-
 import HeroSection from "../components/HeroSection";
 
 

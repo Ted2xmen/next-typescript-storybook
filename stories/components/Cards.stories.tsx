@@ -1,5 +1,5 @@
 import Lastfm from "../../components/Cards/Lastfm";
-import Github from "../../components/Cards/Github";
+import GithubCard from "../../components/Cards/GithubCard";
 
 export default {
     title: "Components/Cards",
@@ -7,5 +7,5 @@ export default {
 }
 
 export const LastfmCard = () => {
-    return <Lastfm />
+    return <GithubCard />
 }

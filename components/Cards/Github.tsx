@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import axios from "axios";
+import GithubCard from "./GithubCard";
 
 const GithubContainer = styled.div`
-  color: black;
+  color: green;
 `;
 
 const Github = () => {
@@ -11,7 +12,6 @@ const Github = () => {
   const [isLoading, setLoading] = useState(false);
 
   useEffect(() => {
-
     const options = {
       headers: {
         "Content-Type": "application/json",
@@ -30,12 +30,17 @@ const Github = () => {
 
   return (
     <GithubContainer>
-      {data
-        ?.filter((repo: any) => repo.topics.map((ite: any) => ite === "tailwindcss"))
-        
-        .map((item: any, i) => {
-          return <li key={item.id}> {i} {item.name} </li>
-        })}
+      {!data ? (
+        data
+          ?.filter((f: any) => f.topics.includes("portfolio"))
+          .map((item: any, i: number) => {
+            return (
+              <GithubCard key={i} items={item} />
+            );
+          })
+      ) : (
+        <p> api request limit</p>
+      )}
     </GithubContainer>
   );
 };
