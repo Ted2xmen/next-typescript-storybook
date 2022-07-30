@@ -12,7 +12,7 @@ const GithubCardContainer = styled.div`
 const GithubCard = ({items}: any) => {
   return (
     <GithubCardContainer>
-      <h1>{items.name}</h1>
+      <h1>Deneme</h1>
     </GithubCardContainer>
   );
 }
