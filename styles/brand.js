@@ -9,4 +9,10 @@ export const badgeColors = {
 
 export const brandColors = {
   main: "#0F172A",
+  secondary: "#1f2940",
 };
+
+export const spacing = {
+  marginTop: "1rem",
+  paddingTop: "1rem", 
+}

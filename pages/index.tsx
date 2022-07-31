@@ -2,8 +2,10 @@ import type { NextPage } from "next";
 import Head from "next/head";
 
 import Github from "../components/Cards/Github";
-import HeroParagraph from "../components/HeroParagraph";
-import HeroSection from "../components/HeroSection";
+import HeroParagraph from "../components/Hero/HeroParagraph";
+import HeroSection from "../components/Hero/HeroSection";
+import HeroLinks from "../components/Hero/HeroLinks";
+
 
 
 const Home: NextPage = () => {
@@ -16,6 +18,7 @@ const Home: NextPage = () => {
       </Head>
       <HeroSection title="Tuğrul Erdem Dogru" />
       <HeroParagraph />
+      <HeroLinks />
       <Github />
     </>
   );

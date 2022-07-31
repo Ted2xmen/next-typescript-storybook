@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { brandColors } from "./styles/brand";
 import Navigation from "./components/LayoutRelated/Navigation";
 import Footer from "./components/LayoutRelated/Footer";
+import Icon from "./components/Icon";
 
 
 const LayoutWrapper = styled.div`
@@ -11,7 +12,7 @@ const LayoutWrapper = styled.div`
   background-color: ${brandColors.main};
   padding: 30px 20px;
   width: 100%;
-  height: 100vh;
+  height: 100%;
 `;
 
 const PageWrapper = styled.div`
@@ -26,6 +27,7 @@ const Layout = ({ children }) => {
       <Navigation />
       <PageWrapper>{children}</PageWrapper>
       <Footer />
+      <Icon position="center" />
     </LayoutWrapper>
   );
 };

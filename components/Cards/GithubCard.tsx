@@ -4,13 +4,13 @@ import styled from "styled-components";
 
 const GithubCardContainer = styled.div`
   width: 400px;
-  background-color: black;
+  background-color: #0f172a;
   height: 150px;
   border-radius: 15px;
   display: block;
   margin: 0 auto;
   padding: 10px;
-  `;
+`;
 
 
 

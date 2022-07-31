@@ -2,10 +2,9 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import axios from "axios";
 import GithubCard from "./GithubCard";
+import TitleBar from '../TitleBar'
 
-const GithubContainer = styled.div`
-  color: green;
-`;
+
 
 const Github = () => {
   const [data, setData] = useState(null);
@@ -19,7 +18,10 @@ const Github = () => {
       },
     };
     setLoading(true);
-    fetch("https://api.github.com/users/ted2xmen/repos", options)
+    fetch(
+      "https://api.github.com/users/ted2xmen/repos?per_page=100&page=1",
+      options
+    )
       .then((res) => res.json())
       .then((data) => {
         setData(data);
@@ -30,17 +32,32 @@ const Github = () => {
 
   const GridContainer = styled.div`
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     grid-gap: 20px;
-    margin-top: 20px;
+    margin-top: 10px;
+  `;
+
+  const GithubContainer = styled.div`
+    color: green;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    padding-top: 20px;
+    padding-bottom: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    background-color: #1f2940;
+    border-radius: 15px;
   `;
 
   return (
     <GithubContainer>
+      <TitleBar title="Portfolio Projects" />
       <GridContainer>
         {data ? (
           data
-            ?.filter((f: any) => f.topics.includes("vue"))
+            ?.filter((f: any) => f.topics.includes("portfolio"))
             .map((item: any, i: number) => {
               return <GithubCard key={i} items={item} />;
             })
