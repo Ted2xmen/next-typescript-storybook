@@ -2,6 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import { Linkedin, Github, Medium } from "@styled-icons/fa-brands";
 
+import { spacing } from "../styles/brand";
+
 const Icon = ({ widthProp, position }) => {
 
   const width = widthProp ? widthProp : "20px";
@@ -14,7 +16,7 @@ const Icon = ({ widthProp, position }) => {
     display: flex;
     flex-direction: row;
     justify-content: ${position};
-    gap: 25px;
+    gap: ${spacing.rowGap};
   `;
 
   const LinkedinIcon: any = styled(Linkedin)`

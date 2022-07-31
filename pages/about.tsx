@@ -1,9 +1,13 @@
 import React from 'react'
+import styled from 'styled-components'
+import Lastfm from '../components/Cards/Lastfm';
+
+
 
 const about = () => {
   return (
     <div>
-     about
+     <Lastfm />
     </div>
   );
 }

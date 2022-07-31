@@ -2,6 +2,8 @@ import type { NextPage } from "next";
 import Head from "next/head";
 
 import Github from "../components/Cards/Github";
+import Lastfm from "../components/Cards/Lastfm";
+
 import HeroParagraph from "../components/Hero/HeroParagraph";
 import HeroSection from "../components/Hero/HeroSection";
 import HeroLinks from "../components/Hero/HeroLinks";
@@ -19,6 +21,7 @@ const Home: NextPage = () => {
       <HeroSection title="Tuğrul Erdem Dogru" />
       <HeroParagraph />
       <HeroLinks />
+      <Lastfm />
       <Github />
     </>
   );

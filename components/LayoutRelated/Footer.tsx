@@ -1,8 +1,10 @@
-import React from 'react'
+import Icon from '../Icon'
 
 const Footer = () => {
   return (
-    <div>Footer component</div>
+    <div>
+      <Icon position="center" />
+    </div>
   )
 }
 

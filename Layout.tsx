@@ -27,7 +27,6 @@ const Layout = ({ children }) => {
       <Navigation />
       <PageWrapper>{children}</PageWrapper>
       <Footer />
-      <Icon position="center" />
     </LayoutWrapper>
   );
 };

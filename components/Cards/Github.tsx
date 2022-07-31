@@ -38,7 +38,6 @@ const Github = () => {
   `;
 
   const GithubContainer = styled.div`
-    color: green;
     display: flex;
     flex-direction: column;
     margin-top: 50px;
@@ -46,10 +45,15 @@ const Github = () => {
     padding-bottom: 25px;
     padding-left: 10px;
     padding-right: 10px;
-
     background-color: #1f2940;
     border-radius: 15px;
+    border: 1px solid;
+    border-left-color: rgb(187, 247, 208);
+    border-right-color: rgb(74, 222, 128);
+    border-top-color: rgb(34, 197, 94);
+    border-bottom-color: rgb(187, 247, 208);
   `;
+
 
   return (
     <GithubContainer>
