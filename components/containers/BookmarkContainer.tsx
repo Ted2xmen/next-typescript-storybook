@@ -1,9 +1,9 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 
-export default function BookmarkContainer({ topic, title }) {
+export default function BookmarkContainer({ topic, topicID }) {
   const [data, setData] = useState([]);
-  const raindropUrl = `https://api.raindrop.io/rest/v1/raindrops/${topic}`;
+  const raindropUrl = `https://api.raindrop.io/rest/v1/raindrops/${topicID}`;
   useEffect(() => {
     const options = {
       headers: {
@@ -16,7 +16,6 @@ export default function BookmarkContainer({ topic, title }) {
       .then(function (response) {
         // handle success
         setData(response.data.items);
-        console.log(response.data.items);
       })
       .catch(function (error) {
         // handle error
@@ -31,7 +30,7 @@ export default function BookmarkContainer({ topic, title }) {
     <div style={{ maxWidth: "744px" }}>
       <div>
         <ul>
-          <h2>{title}</h2>
+          <h2>{topic}</h2>
           {data.map((d) => (
             <li key={d._id} className="block h-24">
               <a href={d.link}>

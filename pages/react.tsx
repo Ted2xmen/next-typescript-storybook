@@ -3,10 +3,8 @@ import PageLayout from "../components/LayoutRelated/PageLayout";
 
 const React = () => {
   return (
-    <PageLayout>
-      <div>
-        <BookmarkContainer title="React 101" topic="26533738" />
-      </div>
+    <PageLayout title="React 101">
+      <BookmarkContainer topic="React 101" topicID="26533738" />
     </PageLayout>
   );
 };

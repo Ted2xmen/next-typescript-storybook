@@ -1,16 +1,8 @@
-export const pageList = [
+export const SubMenuList = [
   {
     name: "Home",
     path: "/",
   },
-
-  // {
-  //   name: "Read",
-  //   path: "/read",
-  // },
-];
-
-export const SubMenuList = [
   {
     name: "JavaScript 101",
     path: "/js",

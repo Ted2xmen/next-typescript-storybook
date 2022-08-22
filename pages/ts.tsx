@@ -5,10 +5,8 @@ import PageLayout from "../components/LayoutRelated/PageLayout";
 
 const ts = () => {
   return (
-    <PageLayout>
-      <div>
-        <BookmarkContainer title="TypeScript 101" topic="26099349" />
-      </div>
+    <PageLayout title="TypeScript 101">
+      <BookmarkContainer topic="TypeScript 101" topicID="26099349" />
     </PageLayout>
   );
 };

@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
+import SubMenu from "../SubMenu";
 
 import Footer from "./Footer";
-import Navigation from "./Navigation";
 
 const LayoutWrapper = styled.div`
   padding: 30px 20px;
@@ -21,11 +21,13 @@ type Props = {
 
 const Layout: React.FC<Props> = ({ children }) => {
   return (
-    <LayoutWrapper>
-      <Navigation />
-      <PageWrapper>{children}</PageWrapper>
-      <Footer />
-    </LayoutWrapper>
+    <>
+      <LayoutWrapper>
+        <SubMenu />
+        <PageWrapper>{children}</PageWrapper>
+        <Footer />
+      </LayoutWrapper>
+    </>
   );
 };
 
