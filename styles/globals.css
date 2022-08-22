@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 
 html,
 body {
@@ -6,9 +7,16 @@ body {
   margin: 0;
   width: 100;
   height: 100vh;
-  font-family: 'Anton', sans-serif;
   background-color: #eec028;
   color: black;
+}
+
+.anton {
+  font-family: 'Anton', sans-serif;
+}
+
+.playfair {
+  font-family: 'Playfair Display', serif;
 }
 
 

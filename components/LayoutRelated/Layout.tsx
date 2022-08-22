@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import SubMenu from "../SubMenu";
 
 import Footer from "./Footer";
 import Navigation from "./Navigation";
@@ -23,6 +24,7 @@ const Layout: React.FC<Props> = ({ children }) => {
   return (
     <LayoutWrapper>
       <Navigation />
+      <SubMenu />
       <PageWrapper>{children}</PageWrapper>
       <Footer />
     </LayoutWrapper>

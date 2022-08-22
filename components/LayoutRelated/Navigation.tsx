@@ -26,7 +26,7 @@ const Navigation = () => {
     <NavWrapper>
       {pageList.map((item, i) => {
         return (
-          <ListItem key={i}>
+          <ListItem className="anton" key={i}>
             <Link href={item.path}>{item.name}</Link>
           </ListItem>
         );
