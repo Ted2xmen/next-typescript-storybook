@@ -35,7 +35,10 @@ const HeroContainer = styled.div`
 //   position: static;
 // `;
 
-const HeroSection = ({ title }) => {
+type Props = {
+  title: string;
+};
+const HeroSection: React.FC<Props> = ({ title }) => {
   return (
     <HeroContainer>
       <Image className="radius" src={hero} alt="hero" />

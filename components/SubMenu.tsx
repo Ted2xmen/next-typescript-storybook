@@ -2,8 +2,6 @@ import React from "react";
 import Link from "next/link";
 import styled from "styled-components";
 
-import { SubMenuList } from "../pages/pageList";
-
 const Wrapper = styled.ul`
   display: flex;
   justify-content: center;
@@ -25,6 +23,25 @@ const Wrapper = styled.ul`
     }
   }
 `;
+
+const SubMenuList = [
+  {
+    name: "Home",
+    path: "/",
+  },
+  {
+    name: "JavaScript 101",
+    path: "/js",
+  },
+  {
+    name: "React 101",
+    path: "/react",
+  },
+  {
+    name: "TypeScript 101",
+    path: "/ts",
+  },
+];
 
 const SubMenu: React.FC = () => {
   return (
