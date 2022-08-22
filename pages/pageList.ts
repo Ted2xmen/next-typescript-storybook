@@ -16,3 +16,5 @@ export const SubMenuList = [
     path: "/ts",
   },
 ];
+
+export default SubMenuList

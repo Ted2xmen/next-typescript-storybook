@@ -29,7 +29,7 @@ export default function BookmarkContainer({ topic, topicID }: Props) {
       .then(function () {
         // always executed
       });
-  }, []);
+  }, [raindropUrl]);
 
   return (
     <div style={{ maxWidth: "744px" }}>
