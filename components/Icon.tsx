@@ -9,33 +9,38 @@ type Props = {
   position: "center" | "start" | "end";
 };
 
-const Icon = ({ widthProp, position }: Props) => {
+const Icon: React.FC<Props> = ({ widthProp, position }) => {
   const width = widthProp ? widthProp + "px" : "20px";
-
-  const IconWrapper: unknown = styled.div`
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const IconWrapper: any = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: ${position};
     gap: ${spacing.rowGap};
   `;
-
-  const MediumIcon: unknown = styled(Medium)`
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const MediumIcon: any = styled(Medium)`
     width: ${width};
   `;
 
-  const LinkedinIcon: unknown = styled(Linkedin)`
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const LinkedinIcon: any = styled(Linkedin)`
     width: ${width};
   `;
-  const GithubIcon: unknown = styled(Github)`
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const GithubIcon: any = styled(Github)`
     width: ${width};
   `;
 
   return (
-    <IconWrapper>
-      <LinkedinIcon />
-      <GithubIcon />
-      <MediumIcon />
-    </IconWrapper>
+    <>
+      <IconWrapper>
+        <LinkedinIcon />
+        <GithubIcon />
+        <MediumIcon />
+      </IconWrapper>
+    </>
   );
 };
 
