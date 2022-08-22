@@ -11,7 +11,7 @@ const Github = () => {
     const options = {
       headers: {
         "Content-Type": "application/json",
-        Authorization: process.env.NEXT_GITHUB_TOKEN,
+        Authorization: process.env.NEXT_GITHUB_TOKEN, // ??
       },
     };
     setLoading(true);

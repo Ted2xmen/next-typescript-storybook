@@ -1,15 +1,13 @@
-import React from 'react'
-import styled from 'styled-components'
-import Lastfm from '../components/Cards/Lastfm';
+import React from "react";
 
-
+import Lastfm from "../components/Cards/Lastfm";
 
 const about = () => {
   return (
     <div>
-     <Lastfm />
+      <Lastfm />
     </div>
   );
-}
+};
 
-export default about
+export default about;

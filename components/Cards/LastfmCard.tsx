@@ -1,12 +1,9 @@
-import React from 'react'
-import Lastfm from './Lastfm'
+import React from "react";
 
-const LastfmCard = ({albums}) => {
-  return (
-    <div>
-        {/* {albums[0]?.artist.name} */}
-    </div>
-  )
-}
+// import Lastfm from './Lastfm'
 
-export default LastfmCard
+const LastfmCard = ({ albums }) => {
+  return <div>{albums[0]?.artist.name}</div>;
+};
+
+export default LastfmCard;

@@ -1,6 +1,6 @@
+import { Lastfm } from "@styled-icons/fa-brands/Lastfm";
 import React, { HTMLAttributes, ReactNode } from "react";
 import styled from "styled-components";
-import { Lastfm } from "@styled-icons/fa-brands/Lastfm";
 
 import { badgeColors, brandColors } from "../styles/brand";
 

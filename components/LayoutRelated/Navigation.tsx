@@ -9,18 +9,16 @@ const NavWrapper = styled.ul`
   flex-direction: row;
   justify-content: end;
   margin: 10px;
+  font-size: 1.9rem;
   padding-top: 10px;
   padding-right: 20px;
-
 `;
 
 const ListItem = styled.li`
-  color: black;
   margin-left: 36px;
   list-style: none;
   text-decoration: none;
   font-size: 1.2rem;
-  color: white;
 `;
 
 const Navigation = () => {

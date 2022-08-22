@@ -1,6 +1,8 @@
 import React from "react";
+
 import Icon from "../Icon";
 import styled from "styled-components";
+
 import Badges from "../Badges";
 import { spacing } from "../../styles/brand";
 
@@ -16,7 +18,7 @@ const HeroLinks = () => {
     <Wrapper>
       <Icon widthProp={30} position="start" />
       <Badges size="sm" variant="now">
-        Machine Gun Kelly play this when i'm gone
+        Machine Gun Kelly play this when Im gone
       </Badges>
     </Wrapper>
   );
