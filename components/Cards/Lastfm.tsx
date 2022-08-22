@@ -1,11 +1,9 @@
-import React, {useEffect, useState} from 'react'
-import axios from 'axios'
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 import LastfmCard from "./LastfmCard";
 
-
 const Lastfm = () => {
-
-  const [album, setData] = React.useState([])
+  const [album, setData] = React.useState([]);
 
   useEffect(() => {
     axios
@@ -15,15 +13,13 @@ const Lastfm = () => {
       .then((res) => {
         setData(res.data.topalbums.album);
       });
-  }, [])
+  }, []);
 
   return (
     <div>
-      
       <LastfmCard albums={album} />
-
     </div>
-  )
-}
+  );
+};
 
-export default Lastfm
+export default Lastfm;

@@ -17,6 +17,7 @@ const HeroTitle = styled.h1`
   );
   background-size: 100%;
   background-repeat: repeat;
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-background-clip: text;
@@ -24,21 +25,10 @@ const HeroTitle = styled.h1`
   position: static;
 `;
 
-const HeroSub = styled.h2`
-  font-size: 2.5rem;
-  font-family: "Indie Flower", cursive;
-  transform: rotate(-20deg);
-  right: 90px;
-  top: -10px;
-  position: relative;
-`;
-
-
 const HeroSection = ({ title }) => {
   return (
     <HeroContainer>
       <HeroTitle>{title}</HeroTitle>
-      {/* <HeroSub>frontend developer </HeroSub> */}
     </HeroContainer>
   );
 };

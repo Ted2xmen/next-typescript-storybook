@@ -1,28 +1,32 @@
+import { Linkedin, Github, Medium } from "@styled-icons/fa-brands";
 import React from "react";
 import styled from "styled-components";
-import { Linkedin, Github, Medium } from "@styled-icons/fa-brands";
 
 import { spacing } from "../styles/brand";
 
-const Icon = ({ widthProp, position }) => {
+type Props = {
+  widthProp?: number | undefined;
+  position: "center" | "start" | "end";
+};
 
-  const width = widthProp ? widthProp : "20px";
+const Icon = ({ widthProp, position }: Props) => {
+  const width = widthProp ? widthProp + "px" : "20px";
 
-  const MediumIcon: any = styled(Medium)`
-    width: ${width};
-  `;
-
-  const IconWrapper = styled.div`
+  const IconWrapper: unknown = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: ${position};
     gap: ${spacing.rowGap};
   `;
 
-  const LinkedinIcon: any = styled(Linkedin)`
+  const MediumIcon: unknown = styled(Medium)`
     width: ${width};
   `;
-  const GithubIcon: any = styled(Github)`
+
+  const LinkedinIcon: unknown = styled(Linkedin)`
+    width: ${width};
+  `;
+  const GithubIcon: unknown = styled(Github)`
     width: ${width};
   `;
 

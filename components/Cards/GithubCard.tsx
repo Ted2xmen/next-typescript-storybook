@@ -12,8 +12,6 @@ const GithubCardContainer = styled.div`
   padding: 10px;
 `;
 
-
-
 const Wrapper = styled.div`
   display: flex;
   align-items: center;
@@ -31,8 +29,6 @@ const GithubIcon = styled(Github)`
   color: white;
 `;
 
-
-
 const StackContainer = styled.div`
   display: flex;
   padding-top: 20px;
@@ -46,16 +42,16 @@ const Stack = styled.h3`
   padding-left: 15px;
 `;
 
-
-
-
-
 const GithubCard = ({ items }: any) => {
   return (
     <GithubCardContainer>
       <Wrapper>
         <GithubIcon />
         <Title>{items.name}</Title>
+        <p> {items.description} </p>
+        {/* <h3> {items.full_name} </h3>
+        <h4> {items.homepage} </h4>
+        <h3> {items.language} </h3> */}
       </Wrapper>
       <StackContainer>
         <Stack>Vue</Stack>

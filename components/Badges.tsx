@@ -17,8 +17,6 @@ const Badge = styled.span`
       ? "linear-gradient(to right, rgb(58, 80, 65), rgb(6, 51, 23))"
       : "none"};
 
-
-
   background-color: ${(props: BadgeProps) =>
     (props.variant === "success" && badgeColors.success) ||
     (props.variant === "danger" && badgeColors.danger) ||

@@ -1,10 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import axios from "axios";
-import GithubCard from "./GithubCard";
-import TitleBar from '../TitleBar'
 
-
+import GithubCard from "../../components/Cards/GithubCard";
 
 const Github = () => {
   const [data, setData] = useState(null);
@@ -41,10 +38,6 @@ const Github = () => {
     display: flex;
     flex-direction: column;
     margin-top: 50px;
-    padding-top: 20px;
-    padding-bottom: 25px;
-    padding-left: 10px;
-    padding-right: 10px;
     background-color: #1f2940;
     border-radius: 15px;
     border: 1px solid;
@@ -54,14 +47,13 @@ const Github = () => {
     border-bottom-color: rgb(187, 247, 208);
   `;
 
-
   return (
     <GithubContainer>
-      <TitleBar title="Portfolio Projects" />
       <GridContainer>
         {data ? (
           data
             ?.filter((f: any) => f.topics.includes("portfolio"))
+            .slice(0, 3)
             .map((item: any, i: number) => {
               return <GithubCard key={i} items={item} />;
             })

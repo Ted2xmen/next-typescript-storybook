@@ -1,11 +1,11 @@
-import Icon from '../Icon'
+import Icon from "../Icon";
 
 const Footer = () => {
   return (
     <div>
-      <Icon position="center" />
+      <Icon position="center" widthProp={30} />
     </div>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

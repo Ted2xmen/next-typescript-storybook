@@ -4,7 +4,6 @@ import styled from "styled-components";
 const Paragraph = styled.h3`
   padding: 10px 20px;
   font-size: 1.5rem;
-  font-family: "Cormorant Garamond", serif;
   background-image: radial-gradient(
     at 50% 0%,
     rgb(255, 251, 235),
@@ -13,6 +12,7 @@ const Paragraph = styled.h3`
   );
   background-size: 100%;
   background-repeat: repeat;
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-background-clip: text;
