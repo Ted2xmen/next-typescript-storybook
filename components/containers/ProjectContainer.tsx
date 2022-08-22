@@ -1,28 +1,22 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
-import GithubCard from "../../components/Cards/GithubCard";
-
-const Github = () => {
+const Github: React.FC = () => {
   const [data, setData] = useState(null);
   const [isLoading, setLoading] = useState(false);
 
   useEffect(() => {
-    const options = {
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: process.env.NEXT_GITHUB_TOKEN, // ??
-      },
-    };
+    // const options = {
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //     Authorization: process.env.NEXT_GITHUB_TOKEN, // ??
+    //   },
+    // };
     setLoading(true);
-    fetch(
-      "https://api.github.com/users/ted2xmen/repos?per_page=100&page=1",
-      options
-    )
+    fetch("https://api.github.com/users/ted2xmen/repos?per_page=100&page=1")
       .then((res) => res.json())
       .then((data) => {
         setData(data);
-        console.log(data);
         setLoading(false);
       });
   }, []);
@@ -50,16 +44,12 @@ const Github = () => {
   return (
     <GithubContainer>
       <GridContainer>
-        {data ? (
-          data
-            ?.filter((f: any) => f.topics.includes("portfolio"))
-            .slice(0, 3)
-            .map((item: any, i: number) => {
-              return <GithubCard key={i} items={item} />;
-            })
-        ) : (
-          <p> api request limit</p>
-        )}
+        {/* {data
+          ?.filter((f: any) => f.topics.includes("portfolio"))
+          .slice(0, 3)
+          .map((item: any, i: number) => {
+            return <GithubCard key={i} items={item} />;
+          })} */}
       </GridContainer>
     </GithubContainer>
   );

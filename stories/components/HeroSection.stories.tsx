@@ -1,12 +1,11 @@
 import HeroSection from "../../components/Hero/HeroSection";
 
+// eslint-disable-next-line import/no-anonymous-default-export
 export default {
-    title: "Layout/Hero",
-    component: HeroSection
-}
+  title: "Layout/Hero",
+  component: HeroSection,
+};
 
-export const HeroOne = ({title}) => {
-    return (
-        <HeroSection title="Tuğrul Erdem Dogru" />
-    )
-}
+export const HeroOne = () => {
+  return <HeroSection title={undefined} />;
+};

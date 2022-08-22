@@ -1,7 +1,12 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 
-export default function BookmarkContainer({ topic, topicID }) {
+type Props = {
+  topic: string;
+  topicID: string;
+};
+
+export default function BookmarkContainer({ topic, topicID }: Props) {
   const [data, setData] = useState([]);
   const raindropUrl = `https://api.raindrop.io/rest/v1/raindrops/${topicID}`;
   useEffect(() => {
@@ -31,7 +36,7 @@ export default function BookmarkContainer({ topic, topicID }) {
       <div>
         <ul>
           <h2>{topic}</h2>
-          {data.map((d) => (
+          {data.map((d: any) => (
             <li key={d._id} className="block h-24">
               <a href={d.link}>
                 <div>
@@ -42,7 +47,7 @@ export default function BookmarkContainer({ topic, topicID }) {
                   /> */}
                   <h5>{d.title}</h5>{" "}
                 </div>
-                {d.tags.map((s, i) => (
+                {d.tags.map((s: any, i: number) => (
                   <strong key={i}>{s}</strong>
                 ))}
               </a>
