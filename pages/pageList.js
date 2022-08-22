@@ -4,10 +4,10 @@ export const pageList = [
     path: "/",
   },
 
-  {
-    name: "Read",
-    path: "/read",
-  },
+  // {
+  //   name: "Read",
+  //   path: "/read",
+  // },
 ];
 
 export const SubMenuList = [
@@ -22,9 +22,5 @@ export const SubMenuList = [
   {
     name: "TypeScript 101",
     path: "/ts",
-  },
-  {
-    name: "Design 101",
-    path: "/design",
   },
 ];

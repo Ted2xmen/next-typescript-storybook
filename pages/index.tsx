@@ -1,10 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 
-import Lastfm from "../components/Cards/Lastfm";
-import ProjectContainer from "../components/containers/ProjectContainer";
-// import HeroLinks from "../components/Hero/HeroLinks";
-// import HeroParagraph from "../components/Hero/HeroParagraph";
 import HeroSection from "../components/Hero/HeroSection";
 import SubMenu from "../components/SubMenu";
 
@@ -17,8 +13,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <HeroSection title="Tsadasdasdsa" />
-      {/* <SubMenu /> */}
-      {/* <ProjectContainer /> */}
+      <SubMenu />
     </>
   );
 };
