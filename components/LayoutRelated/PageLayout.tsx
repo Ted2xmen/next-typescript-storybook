@@ -12,7 +12,8 @@ const Wrapper = styled.div`
   flex-direction: column;
   padding: 20px;
   align-items: center;
-  justify-content: center;
+  justify-items: center;
+  margin: auto;
 `;
 
 const PageLayout: React.FC<Props> = ({ children, title }) => {
