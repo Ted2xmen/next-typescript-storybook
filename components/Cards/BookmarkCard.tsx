@@ -38,6 +38,21 @@ const Wrapper = styled.li`
       justify-content: space-between;
     }
   }
+
+  h4 {
+    font-weight: bold;
+    font-family: "Poppins", sans-serif;
+  }
+  strong {
+    margin-right: 8px;
+    font-size: 0.7rem;
+    border: 1px solid;
+    padding: 2px 5px;
+    border-radius: 5px;
+    background-color: #1f0e01ad;
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+  }
 `;
 
 const BookmarkCard = ({ d }: Props) => {
@@ -48,15 +63,20 @@ const BookmarkCard = ({ d }: Props) => {
       </div>
       <div className="info shadow">
         <div className="link">
-          <span> {d.type} </span>
+          <span>
+            {" "}
+            {d.type} {d.important ? "🔴" : ""}
+          </span>
           <a target="_blank" rel="noreferrer noopener" href={d.link}>
-            {d.domain}
-            <Image src={external} alt="external" />
+            {d.domain}{" "}
+            <Image className="external" src={external} alt="external" />
           </a>
         </div>
-        <h3>{d.title}</h3>
+        <h4>{d.title}</h4>
         {d.tags.map((s: any, i: number) => (
-          <strong key={i}>{s}</strong>
+          <strong className="" key={i}>
+            {s}
+          </strong>
         ))}
       </div>
     </Wrapper>
