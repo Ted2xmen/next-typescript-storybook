@@ -1,6 +1,10 @@
 import React from "react";
 
-const BookmarkCard = ({ d }) => {
+type Props = {
+  d?: any;
+};
+
+const BookmarkCard = ({ d }: Props) => {
   return (
     <>
       <li className="block h-24">
