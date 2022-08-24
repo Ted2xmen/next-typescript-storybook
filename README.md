@@ -1,4 +1,8 @@
-# Getting Started
+# Read 101
 
-Next JS, Typescript and Styled Components
-+ Eslint,
+- digital garden by ted2xmen
+
+
+## Next JS, Storybook, Typescript and Styled Components
+Raindrop API
+Youtube API

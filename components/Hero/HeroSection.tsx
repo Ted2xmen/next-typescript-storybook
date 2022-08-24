@@ -9,30 +9,17 @@ const HeroContainer = styled.div`
   flex-direction: column;
   align-items: center;
 
+  .italic {
+    font-style: italic;
+  }
+
   .radius {
     border-radius: 20px;
-    width: 50%;
+    width: 50px;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
       rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
   }
 `;
-
-// const HeroTitle = styled.h1`
-//   background-image: linear-gradient(
-//     to right,
-//     rgb(64, 89, 73),
-//     rgb(31, 96, 54),
-//     rgb(2, 27, 11)
-//   );
-//   background-size: 100%;
-//   background-repeat: repeat;
-//   background-clip: text;
-//   -webkit-background-clip: text;
-//   -webkit-text-fill-color: transparent;
-//   -moz-background-clip: text;
-//   -moz-text-fill-color: transparent;
-//   position: static;
-// `;
 
 type Props = {
   title: string;

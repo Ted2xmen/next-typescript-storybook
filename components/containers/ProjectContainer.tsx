@@ -1,25 +1,24 @@
-import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
 const Github: React.FC = () => {
-  const [data, setData] = useState(null);
-  const [isLoading, setLoading] = useState(false);
+  // const [data, setData] = useState(null);
+  // const [isLoading, setLoading] = useState(false);
 
-  useEffect(() => {
-    // const options = {
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //     Authorization: process.env.NEXT_GITHUB_TOKEN, // ??
-    //   },
-    // };
-    setLoading(true);
-    fetch("https://api.github.com/users/ted2xmen/repos?per_page=100&page=1")
-      .then((res) => res.json())
-      .then((data) => {
-        setData(data);
-        setLoading(false);
-      });
-  }, []);
+  // useEffect(() => {
+  //   // const options = {
+  //   //   headers: {
+  //   //     "Content-Type": "application/json",
+  //   //     Authorization: process.env.NEXT_GITHUB_TOKEN, // ??
+  //   //   },
+  //   // };
+  //   setLoading(true);
+  //   fetch("https://api.github.com/users/ted2xmen/repos?per_page=100&page=1")
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       setData(data);
+  //       setLoading(false);
+  //     });
+  // }, []);
 
   const GridContainer = styled.div`
     display: grid;

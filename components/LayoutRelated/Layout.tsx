@@ -1,8 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import SubMenu from "../SubMenu";
 
-import Footer from "./Footer";
+import SubMenu from "./SubMenu";
 
 const LayoutWrapper = styled.div`
   padding: 30px 20px;
@@ -25,7 +24,6 @@ const Layout: React.FC<Props> = ({ children }) => {
       <LayoutWrapper>
         <SubMenu />
         <PageWrapper>{children}</PageWrapper>
-        <Footer />
       </LayoutWrapper>
     </>
   );

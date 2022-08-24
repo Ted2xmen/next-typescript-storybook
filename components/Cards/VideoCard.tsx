@@ -5,7 +5,6 @@ import styled from "styled-components";
 import external from "../../public/external.svg";
 
 type Props = {
-  d?: any;
   video?: any;
 };
 
@@ -20,9 +19,9 @@ const Wrapper = styled.li`
   border: 1px solid black;
 
   img {
-    width: 120px;
-    height: 120px;
-    object-fit: cover;
+    width: 140px;
+    height: 140px;
+    object-fit: contain;
     border-radius: 10px;
     margin-right: 15px;
   }
@@ -56,26 +55,30 @@ const Wrapper = styled.li`
   }
 `;
 
-const BookmarkCard = ({ d }: Props) => {
+const BookmarkCard = ({ video }: Props) => {
   return (
     <Wrapper>
       <div>
-        <img src={d.media[0].link} alt="todo" />
+        <img
+          src={video.snippet.thumbnails.medium.url}
+          alt={video.snippet.title}
+        />
       </div>
       <div className="info shadow">
         <div className="link">
-          <span>
-            {" "}
-            {d.type}
-            {d.important ? "🔴" : ""}
-          </span>
-          <a target="_blank" rel="noreferrer noopener" href={d.link}>
-            {d && d.domain}{" "}
+          <span>{video.snippet.videoOwnerChannelTitle} </span>
+          <a
+            target="_blank"
+            rel="noreferrer noopener"
+            href={
+              "https://www.youtube.com/watch?v=" +
+              video.snippet.resourceId.videoId
+            }
+          >
             <Image className="external" src={external} alt="external" />
           </a>
         </div>
-        <h4>{d.title}</h4>
-        {d && d.tags.map((s: any, i: number) => <strong key={i}>{s}</strong>)}
+        <h4>{video.snippet.title}</h4>
       </div>
     </Wrapper>
   );

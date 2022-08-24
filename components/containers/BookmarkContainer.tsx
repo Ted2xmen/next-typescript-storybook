@@ -2,7 +2,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 
 import BookmarkCard from "../Cards/BookmarkCard";
-import LoaderBookmark from "../Cards/LoaderBookmark";
+import Loader from "../Cards/Loader";
 
 type Props = {
   topic: string;
@@ -25,7 +25,7 @@ export default function BookmarkContainer({ topic, topicID }: Props) {
       .then(function (response) {
         // handle success
         setData(response.data.items);
-        console.log(response.data.items);
+        console.log("bookmark", response.data.items);
         setLoading(true);
       })
       .catch(function (error) {
@@ -43,12 +43,12 @@ export default function BookmarkContainer({ topic, topicID }: Props) {
         {loading ? (
           <ul>
             <h2>{topic}</h2>
-            {data.map((d: any) => (
-              <BookmarkCard key={d.id} d={d} />
+            {data.map((d: any, i: number) => (
+              <BookmarkCard key={i} d={d} />
             ))}
           </ul>
         ) : (
-          <LoaderBookmark />
+          <Loader />
         )}
       </div>
     </div>

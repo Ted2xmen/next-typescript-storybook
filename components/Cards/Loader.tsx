@@ -10,7 +10,7 @@ const Wrapper = styled.div`
   }
 `;
 
-const LoaderBookmark = () => {
+const Loader = () => {
   return (
     <Wrapper>
       <svg
@@ -56,4 +56,4 @@ const LoaderBookmark = () => {
   );
 };
 
-export default LoaderBookmark;
+export default Loader;

@@ -10,6 +10,9 @@ const Wrapper = styled.ul`
   justify-content: center;
   list-style: none;
   padding: 20px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
 
   @media screen and (max-width: 768px) {
     width: 100%;
@@ -58,6 +61,10 @@ const SubMenuList = [
   {
     name: "TypeScript 101",
     path: "/ts",
+  },
+  {
+    name: "Videos 101",
+    path: "/tutorial",
   },
 ];
 
