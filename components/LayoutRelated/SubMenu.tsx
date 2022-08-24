@@ -10,15 +10,13 @@ const Wrapper = styled.ul`
   justify-content: center;
   list-style: none;
   padding: 20px;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
 
   @media screen and (max-width: 768px) {
     width: 100%;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
+    justify-items: center;
     gap: 10px;
   }
 
