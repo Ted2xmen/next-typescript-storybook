@@ -53,11 +53,11 @@ const SubMenuList = [
     path: "/js",
   },
   {
-    name: "React 101",
+    name: "React 101 ()",
     path: "/react",
   },
   {
-    name: "TypeScript 101",
+    name: "TypeScript 101 (getStaticProps w revalidate)",
     path: "/ts",
   },
   {

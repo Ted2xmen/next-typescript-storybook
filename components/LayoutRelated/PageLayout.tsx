@@ -3,7 +3,7 @@ import React from "react";
 import styled from "styled-components";
 
 type Props = {
-  children: JSX.Element;
+  children: React.ReactNode;
   title: string;
 };
 
