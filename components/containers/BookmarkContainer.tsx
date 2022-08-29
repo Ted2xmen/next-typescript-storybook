@@ -25,7 +25,6 @@ export default function BookmarkContainer({ topic, topicID }: Props) {
       .then(function (response) {
         // handle success
         setData(response.data.items);
-        console.log("bookmark", response.data.items);
         setLoading(true);
       })
       .catch(function (error) {

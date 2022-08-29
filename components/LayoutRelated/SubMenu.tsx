@@ -61,6 +61,14 @@ const SubMenuList = [
     path: "/ts",
   },
   {
+    name: "Redux 101 (getstaticprops)",
+    path: "/redux",
+  },
+  {
+    name: "CSS 101 (getServerSideProps)",
+    path: "/css",
+  },
+  {
     name: "Videos 101",
     path: "/tutorial",
   },
