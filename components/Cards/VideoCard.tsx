@@ -16,7 +16,7 @@ const Wrapper = styled.li`
   flex-direction: row;
   list-style: none;
   margin-top: 25px;
-  border: 1px solid black;
+  border: 1px solid red;
 
   img {
     width: 140px;

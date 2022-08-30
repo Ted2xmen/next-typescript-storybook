@@ -6,12 +6,10 @@ import PageLayout from "../components/LayoutRelated/PageLayout";
 const css = ({ bookmarks }: any) => {
   return (
     <PageLayout title="CSS 101">
-      <div>
-        <p> {Date.now()} </p>
-        {bookmarks.items.map((d: unknown, i: number) => (
-          <BookmarkCard key={i} d={d} />
-        ))}
-      </div>
+      <p> {Date.now()} </p>
+      {bookmarks.items.map((d: unknown, i: number) => (
+        <BookmarkCard key={i} d={d} />
+      ))}
     </PageLayout>
   );
 };

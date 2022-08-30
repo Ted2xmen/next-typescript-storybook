@@ -2,23 +2,19 @@ import Image from "next/image";
 import React from "react";
 import styled from "styled-components";
 
-import hero from "../../public/hero-read.jpg";
+import hero from "./hero.svg";
 
 const HeroContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 
-  .italic {
-    font-style: italic;
-  }
-
-  .radius {
-    border-radius: 20px;
-    width: 50px;
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
-      rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
-  }
+  /* @media screen and (max-width: 375px) {
+    width: 100%;
+    background-color: red;
+    font-size: 0.7rem;
+  } */
 `;
 
 type Props = {
@@ -27,7 +23,7 @@ type Props = {
 const HeroSection: React.FC<Props> = ({ title }) => {
   return (
     <HeroContainer>
-      <Image className="radius" src={hero} alt="hero" />
+      <Image width={400} height={200} src={hero} alt="hero" />
       <h1 className="playfair">{title}</h1>
     </HeroContainer>
   );

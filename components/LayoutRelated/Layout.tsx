@@ -1,17 +1,17 @@
 import React from "react";
 import styled from "styled-components";
 
-import SubMenu from "./SubMenu";
+import Navbar from "./Navbar";
 
 const LayoutWrapper = styled.div`
   padding: 30px 20px;
-  width: 100%;
-  height: 100%;
 `;
 
 const PageWrapper = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;
 
 type Props = {
@@ -22,7 +22,7 @@ const Layout: React.FC<Props> = ({ children }) => {
   return (
     <>
       <LayoutWrapper>
-        <SubMenu />
+        <Navbar />
         <PageWrapper>{children}</PageWrapper>
       </LayoutWrapper>
     </>

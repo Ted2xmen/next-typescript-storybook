@@ -9,7 +9,8 @@ const Wrapper = styled.ul`
   flex-wrap: wrap;
   justify-content: center;
   list-style: none;
-  padding: 20px;
+  padding: 12px;
+  margin: 24px;
 
   @media screen and (max-width: 768px) {
     width: 100%;
@@ -17,19 +18,19 @@ const Wrapper = styled.ul`
     justify-content: center;
     align-items: center;
     justify-items: center;
-    gap: 10px;
+    gap: 6px;
   }
 
   li {
-    margin-left: 36px;
-    font-weight: bold;
-    font-size: 1.4rem;
+    margin-left: 14px;
+    font-weight: medium;
+    font-size: 1rem;
     cursor: pointer;
-    border: 2px solid black;
-    padding: 6px;
-    border-radius: 10px;
+    border: 1px solid black;
+    padding: 4px;
+    border-radius: 8px;
     &:hover {
-      border: 2px solid white;
+      border: 1px solid white;
       transition: all 0.2s ease-in;
       box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
         rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
@@ -53,7 +54,7 @@ const SubMenuList = [
     path: "/js",
   },
   {
-    name: "React 101 ()",
+    name: "React 101",
     path: "/react",
   },
   {
@@ -74,7 +75,7 @@ const SubMenuList = [
   },
 ];
 
-const SubMenu: React.FC = () => {
+const Navbar: React.FC = () => {
   const router = useRouter();
 
   return (
@@ -92,4 +93,4 @@ const SubMenu: React.FC = () => {
   );
 };
 
-export default SubMenu;
+export default Navbar;
