@@ -1,7 +1,7 @@
 import React from "react";
 
-import VideoContainer from "../components/containers/VideoContainer";
-import PageLayout from "../components/LayoutRelated/PageLayout";
+import VideoContainer from "../components/Containers/VideoContainer";
+import PageLayout from "../components/PageLayout";
 
 const tutorial = () => {
   return (

@@ -1,4 +1,4 @@
-import Badges from "../../components/Badges";
+import Badges from "../../components/UI/Badges";
 import styled from "styled-components";
 
 export default {

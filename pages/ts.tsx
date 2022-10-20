@@ -1,7 +1,7 @@
 import React from "react";
 
 import BookmarkCard from "../components/Cards/BookmarkCard";
-import PageLayout from "../components/LayoutRelated/PageLayout";
+import PageLayout from "../components/PageLayout";
 
 const redux = ({ bookmarks }: any) => {
   return (

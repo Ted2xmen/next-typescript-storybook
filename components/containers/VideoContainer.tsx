@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import VideoCard from "../Cards/VideoCard";
-import Loader from "../Cards/Loader";
+import Loader from "../UI/Loader";
 
 const VideoContainer = ({ topic }: any) => {
   const [video, setVideo] = useState([]);

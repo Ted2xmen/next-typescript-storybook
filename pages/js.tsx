@@ -1,5 +1,5 @@
-import BookmarkContainer from "../components/containers/BookmarkContainer";
-import PageLayout from "../components/LayoutRelated/PageLayout";
+import BookmarkContainer from "../components/Containers/BookmarkContainer";
+import PageLayout from "../components/PageLayout";
 
 const Js = () => {
   return (

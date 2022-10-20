@@ -2,7 +2,7 @@ import { Lastfm } from "@styled-icons/fa-brands/Lastfm";
 import React, { HTMLAttributes, ReactNode } from "react";
 import styled from "styled-components";
 
-import { badgeColors, brandColors } from "../styles/brand";
+import { badgeColors, brandColors } from "../../styles/brand";
 
 interface BadgeProps extends HTMLAttributes<HTMLSpanElement> {
   children: ReactNode;

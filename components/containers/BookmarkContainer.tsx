@@ -2,7 +2,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 
 import BookmarkCard from "../Cards/BookmarkCard";
-import Loader from "../Cards/Loader";
+import Loader from "../UI/Loader";
 
 type Props = {
   topic: string;
