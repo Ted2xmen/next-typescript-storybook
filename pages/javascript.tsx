@@ -1,12 +1,42 @@
-import BookmarkContainer from "../components/Containers/BookmarkContainer";
+import BookmarkCard from "../components/Cards/BookmarkCard";
 import PageLayout from "../components/PageLayout";
 
-const Js = () => {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const Js = ({jsdata}: any) => {
   return (
-    <PageLayout title="Javascript 101">
-      <BookmarkContainer topic="Javascript 101" topicID="25919955" />
-    </PageLayout>
+    <PageLayout title="State Management">
+     <div style={{ maxWidth: "744px" }}>
+      <div>
+        <h2>State Management</h2>
+          {jsdata.items.map((d: unknown, i: number) => (
+          <BookmarkCard key={i} d={d} />
+        ))}
+      </div>
+      
+        </div>
+    </PageLayout>   
   );
 };
 
 export default Js;
+
+
+export async function getStaticProps() {
+  const topicID = "25919955";
+  const raindropUrl = `https://api.raindrop.io/rest/v1/raindrops/${topicID}`;
+
+  const options = {
+    headers: {
+      Authorization: `Bearer ${process.env.NEXT_PUBLIC_RAINDROP}`,
+    },
+  };
+
+  const res = await fetch(raindropUrl, options);
+  const jsdata = await res.json();
+
+  return {
+    props: {
+      jsdata,
+    },
+  };
+}
