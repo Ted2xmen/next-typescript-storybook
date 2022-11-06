@@ -1,5 +1,4 @@
 import BookmarkCard from "../components/Cards/BookmarkCard";
-import BookmarkContainer from "../components/Containers/BookmarkContainer";
 import PageLayout from "../components/PageLayout";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
