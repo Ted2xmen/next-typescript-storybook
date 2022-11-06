@@ -3,21 +3,23 @@ import React from "react";
 import BookmarkCard from "../components/Cards/BookmarkCard";
 import PageLayout from "../components/PageLayout";
 
-const redux = ({ bookmarks }: any) => {
+const state = ({ bookmarks }: any) => {
   return (
-    <PageLayout title="Redux 101">
+    <PageLayout title="State Management">
+     <div style={{ maxWidth: "744px" }}>
       <div>
-        {bookmarks.items.map((d: unknown, i: number) => (
+        <h2>State Management</h2>
+          {bookmarks.items.map((d: unknown, i: number) => (
           <BookmarkCard key={i} d={d} />
         ))}
       </div>
+      
+        </div>
     </PageLayout>
   );
 };
 
 export async function getStaticProps() {
-  // Call an external API endpoint to get posts.
-  // You can use any data fetching library
   const topicID = "26533682";
   const raindropUrl = `https://api.raindrop.io/rest/v1/raindrops/${topicID}`;
 
@@ -29,8 +31,7 @@ export async function getStaticProps() {
 
   const res = await fetch(raindropUrl, options);
   const bookmarks = await res.json();
-  // By returning { props: { posts } }, the Blog component
-  // will receive `posts` as a prop at build time
+
   return {
     props: {
       bookmarks,
@@ -38,4 +39,4 @@ export async function getStaticProps() {
   };
 }
 
-export default redux;
+export default state;

@@ -6,6 +6,7 @@ export const Wrapper = styled.ul`
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 5px;
   list-style: none;
   padding: 12px;
   margin: 24px;
@@ -16,17 +17,17 @@ export const Wrapper = styled.ul`
     justify-content: center;
     align-items: center;
     justify-items: center;
-    gap: 6px;
+    gap: 3px;
   }
 
   li {
-    margin-left: 14px;
+    margin-left: 3px;
     font-weight: medium;
     font-size: 1rem;
     cursor: pointer;
     border: 1px solid black;
-    padding: 4px;
-    border-radius: 8px;
+    padding: 8px;
+    
     &:hover {
       border: 1px solid white;
       transition: all 0.2s ease-in;
@@ -37,7 +38,7 @@ export const Wrapper = styled.ul`
 
   .active {
     color: #eec028;
-    border: 2px solid black;
+    border:none solid black;
     background-color: black;
   }
 `;

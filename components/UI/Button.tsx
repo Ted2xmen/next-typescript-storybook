@@ -3,36 +3,33 @@ import styled from "styled-components";
 
 interface Props extends HTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
-  size?: "sm" | "lg";
   variant: "primary" | "secondary";
-  rounded?: boolean;
   shadow?: boolean;
 }
 
-const TWgreen = "#15803D";
 
-
-const Btn = styled.button`
-  background-color: ${(props: Props) =>
-    props.variant === "primary" ? TWgreen : "white"};
-  color: ${(props: Props) => (props.variant === "primary" ? "white" : TWgreen)};
-  padding: ${(props: Props) =>
-    props.size === "sm" ? "8px 14px" : "14px 22px"};
+const BaseButton = styled.button`
+  padding: 0.7rem;
   cursor: pointer;
-  border: ${(props: Props) =>
-    props.variant === "primary" ? "none" : "1px solid" +TWgreen};
-  border-radius: ${(props: Props) =>
-    props.rounded === true ? "15px" : "none"};
+  border: none;
   box-shadow: ${(props: Props) =>
     props.shadow === true
       ? "rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;"
       : "none"};
+`
+
+const Btn = styled(BaseButton)`
+  background-color: 
+    ${(props: Props) => props.variant === "primary" ? "black" : "yellow"};
+  color: 
+    ${(props: Props) => (props.variant === "primary" ? "white" : "black")};
+
   &:hover {
+    border: inset solid black;
     background-color: ${(props: Props) =>
-      props.variant === "primary" ? "white" : TWgreen};
-    border: 1px solid ${TWgreen}; // ?
+      props.variant === "primary" ? "white" : "green"};
     color: ${(props: Props) =>
-      props.variant === "primary" ? TWgreen : "white"};
+      props.variant === "primary" ? "black" : "white"};
   }
 `;
 

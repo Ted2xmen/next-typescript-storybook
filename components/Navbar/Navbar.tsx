@@ -2,6 +2,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
 
+
 import { Wrapper } from "./NavbarStyle";
 
 const SubMenuList = [
@@ -10,27 +11,19 @@ const SubMenuList = [
     path: "/",
   },
   {
-    name: "JavaScript 101",
-    path: "/js",
+    name: "JavaScript",
+    path: "/javascript",
   },
   {
-    name: "React 101",
+    name: "React",
     path: "/react",
   },
   {
-    name: "TypeScript 101 (getStaticProps w revalidate)",
-    path: "/ts",
+    name: "State Management",
+    path: "/state",
   },
   {
-    name: "Redux 101 (getstaticprops)",
-    path: "/redux",
-  },
-  {
-    name: "CSS 101 (getServerSideProps)",
-    path: "/css",
-  },
-  {
-    name: "Videos 101",
+    name: "Tutorials & Talks",
     path: "/tutorial",
   },
 ];
@@ -43,7 +36,8 @@ const Navbar: React.FC = () => {
       {SubMenuList.map((link, i) => {
         return (
           <Link key={i} href={link.path}>
-            <li className={router.pathname === link.path ? "active" : ""}>
+            <li
+              className={router.pathname === link.path ? "active" : ""}>
               {link.name}
             </li>
           </Link>

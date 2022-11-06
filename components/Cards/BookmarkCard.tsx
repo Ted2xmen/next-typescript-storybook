@@ -11,27 +11,32 @@ type Props = {
 
 const Wrapper = styled.li`
   display: flex;
-  border-radius: 10px;
+  background-color: #3730a3;
+  border-radius: 5px;
   padding: 10px;
   justify-items: center;
   flex-direction: row;
   list-style: none;
   margin-top: 25px;
   border: 1px solid black;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    
 
   img {
     width: 120px;
     height: 120px;
     object-fit: cover;
-    border-radius: 10px;
     margin-right: 15px;
-  }
+    border-radius: 5px;
 
+  }
   .info {
     padding: 10px;
     flex: 1;
-    border-radius: 10px;
-    background-color: #eec438;
+    border-radius: 5px;
+    border:0.1px solid black;
+    font-size: small;
 
     .link {
       display: flex;
@@ -39,35 +44,27 @@ const Wrapper = styled.li`
       justify-content: space-between;
     }
   }
-
   h4 {
     font-weight: bold;
     font-family: "Poppins", sans-serif;
   }
-  strong {
-    margin-right: 8px;
-    font-size: 0.7rem;
-    border: 1px solid;
-    padding: 2px 5px;
-    border-radius: 5px;
-    background-color: #1f0e01ad;
-    color: #fff;
-    font-family: "Poppins", sans-serif;
-  }
+ &:hover {
+  border: white solid 1px;
+transition: 0.3s ease-in-out;
+ }
+
 `;
 
 const BookmarkCard = ({ d }: Props) => {
   return (
     <Wrapper>
-      <div>
-        <img src={d.media[0].link} alt="todo" />
-      </div>
-      <div className="info shadow">
+        <img src={d?.media[0].link} alt="todo" />
+      <div className="info">
         <div className="link">
           <span>
             {" "}
             {d.type}
-            {d.important ? "🔴" : ""}
+            {d.important ? " ⭐" : ""}
           </span>
           <a target="_blank" rel="noreferrer noopener" href={d.link}>
             {d && d.domain}{" "}

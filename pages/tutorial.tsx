@@ -5,7 +5,7 @@ import PageLayout from "../components/PageLayout";
 
 const tutorial = () => {
   return (
-    <PageLayout title="Videos 101">
+    <PageLayout title="Suggested Videos">
       <VideoContainer topic="Suggested  Videos" />
     </PageLayout>
   );
