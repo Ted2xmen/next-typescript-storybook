@@ -23,7 +23,7 @@ const SubMenuList = [
     path: "/state",
   },
   {
-    name: "Tutorials & Talks",
+    name: "Tutorials & Videos",
     path: "/tutorial",
   },
 ];

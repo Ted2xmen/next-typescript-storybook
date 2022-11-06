@@ -54,7 +54,7 @@ transition: 0.3s ease-in-out;
  }
 
 `;
-const BookmarkCard = ({ video }: Props) => {
+const VideoCard = ({ video }: Props) => {
   return (
     <Wrapper>
       <div>
@@ -83,4 +83,4 @@ const BookmarkCard = ({ video }: Props) => {
   );
 };
 
-export default BookmarkCard;
+export default VideoCard;
