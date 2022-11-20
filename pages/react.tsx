@@ -5,9 +5,9 @@ import PageLayout from "../components/PageLayout";
 const React = ({reactData}: any) => {
   return (
     <PageLayout title="React 101">
-       <div style={{ maxWidth: "744px" }}>
+       <div style={{ width: "744px" }}>
       <div>
-        <h2>State Management</h2>
+        <h2>React 101</h2>
           {reactData.items.map((d: unknown, i: number) => (
           <BookmarkCard key={i} d={d} />
         ))}

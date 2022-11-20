@@ -1,13 +1,12 @@
-import axios from "axios";
 import React from "react";
 
 import VideoCard from "../components/Cards/VideoCard";
 import PageLayout from "../components/PageLayout";
 
-const tutorial = ({ytdata}: any) => {
+const Tutorial = ({ytdata}: any) => {
   return (
     <PageLayout title="Tutorials & Videos">
-       <div style={{ maxWidth: "744px" }}>
+       <div style={{ width: "744px" }}>
       <div>
         <h2>Tutorials & Videos</h2>
           {ytdata.items.reverse().map((d: unknown, i: number) => (
@@ -20,7 +19,7 @@ const tutorial = ({ytdata}: any) => {
   );
 };
 
-export default tutorial;
+export default Tutorial;
 
 export async function getStaticProps() {
 
@@ -31,9 +30,6 @@ export async function getStaticProps() {
 
     const res = await fetch(youtubeURL);
   const ytdata = await res.json();
-
-
-
 
   return {
     props: {

@@ -4,10 +4,10 @@ import PageLayout from "../components/PageLayout";
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const Js = ({jsdata}: any) => {
   return (
-    <PageLayout title="State Management">
-     <div style={{ maxWidth: "744px" }}>
+    <PageLayout title="JavaScript 101">
+     <div style={{ width: "744px" }}>
       <div>
-        <h2>State Management</h2>
+        <h2>JavaScript 101</h2>
           {jsdata.items.map((d: unknown, i: number) => (
           <BookmarkCard key={i} d={d} />
         ))}

@@ -18,6 +18,10 @@ const SubMenuList = [
     name: "React",
     path: "/react",
   },
+    {
+    name: "Next JS 101",
+    path: "/next",
+  },
   {
     name: "State Management",
     path: "/state",

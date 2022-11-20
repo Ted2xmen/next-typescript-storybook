@@ -6,7 +6,7 @@ import PageLayout from "../components/PageLayout";
 const state = ({ bookmarks }: any) => {
   return (
     <PageLayout title="State Management">
-     <div style={{ maxWidth: "744px" }}>
+     <div style={{ width: "744px" }}>
       <div>
         <h2>State Management</h2>
           {bookmarks.items.map((d: unknown, i: number) => (
